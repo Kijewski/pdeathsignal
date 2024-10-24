@@ -1,0 +1,11 @@
+include Cargo.toml
+include Cargo.lock
+include LICENSE.md
+include pyproject.toml
+include README.md
+include requires.txt
+include rustfmt.toml
+include setup.cfg
+include setup.py
+
+recursive-include src **

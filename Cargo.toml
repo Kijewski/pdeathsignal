@@ -1,0 +1,56 @@
+[package]
+name = "_pdeathsignal"
+description = "Set or get the parent-death signal number of the calling process"
+version = "0.1.0"
+edition = "2021"
+authors = ["René Kijewski <crates.io@k6i.de>"]
+repository = "https://github.com/Kijewski/pdeathsignal"
+license = "Apache-2.0"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+arrayvec = "0.7.6"
+either = "1.13.0"
+pyo3 = { version = "0.22.0", features = ["abi3-py310", "either"] }
+rustix = { version = "0.38.37", features = ["process"] }
+
+[lints.rust]
+unsafe_code = "forbid"
+
+absolute_paths_not_starting_with_crate = "warn"
+elided_lifetimes_in_paths = "warn"
+explicit_outlives_requirements = "warn"
+meta_variable_misuse = "warn"
+missing_copy_implementations = "warn"
+missing_debug_implementations = "warn"
+missing_docs = "warn"
+non_ascii_idents = "warn"
+noop_method_call = "warn"
+single_use_lifetimes = "warn"
+trivial_casts = "warn"
+unreachable_pub = "warn"
+unused_crate_dependencies = "warn"
+unused_extern_crates = "warn"
+unused_lifetimes = "warn"
+unused_results = "warn"
+warnings = "warn"
+
+[lints.clippy]
+collapsible_match = "warn"
+expect_used = "warn"
+match_bool = "warn"
+match_ref_pats = "warn"
+match_same_arms = "warn"
+match_single_binding = "warn"
+needless_bool = "deny"
+needless_late_init = "warn"
+needless_match = "warn"
+redundant_guards = "warn"
+redundant_pattern = "warn"
+redundant_pattern_matching = "warn"
+single_match = "warn"
+single_match_else = "warn"
+unwrap_used = "warn"
