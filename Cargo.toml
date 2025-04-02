@@ -14,7 +14,7 @@ crate-type = ["cdylib"]
 [dependencies]
 arrayvec = "0.7.6"
 either = "1.13.0"
-pyo3 = { version = "0.22.0", features = ["abi3-py310", "either"] }
+pyo3 = { version = "0.24.1", features = ["abi3-py310", "either"] }
 rustix = { version = "0.38.37", features = ["process"] }
 
 [lints.rust]
